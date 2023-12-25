@@ -1,0 +1,40 @@
+
+# Node.js Express Server with Google Authentication (OpenID Connect & OAuth2)
+
+## Overview
+This repository contains a sample Node.js Express server that implements Google authentication using the OpenID Connect protocol with OAuth 2.0. It's designed as a foundational starting point for web applications requiring user authentication via Google.
+
+## Features
+- **Google Authentication**: Users can sign in using their Google accounts.
+- **OpenID Connect Protocol**: Securely authenticates users and provides user information using tokens.
+- **OAuth 2.0 Flow**: Implements the OAuth 2.0 authorization framework for user access delegation.
+- **Session Management**: Manages user sessions post-authentication.
+
+## Technologies
+- **Node.js & Express**: Utilizes Express.js, a fast, unopinionated, minimalist web framework for Node.js.
+- **openid-client**: A server-side client for authentication with an OpenID Connect provider.
+
+## Getting Started
+
+### Prerequisites
+- Node.js installed on your machine.
+- A Google Cloud Platform account with a configured OAuth 2.0 client.
+
+### Installation
+1. Clone this repository.
+2. Install the required Node.js dependencies:
+
+    **npm install**
+
+3. Configure your environment variables in a `.env` file with your Google OAuth 2.0 credentials.
+
+### Usage
+To start the server, run:
+
+    npm start
+
+
+Access the application on `http://localhost:3000`.
+
+
+

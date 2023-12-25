@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <% if (tokenSet && userInfo) { %>
+      <div>
+        <hr></hr>
+        <h2>User Information</h2>
+        <a href="/auth/refresh"><button>Refresh Token</button></a>
+        <hr></hr>
+        <p><strong>sub:</strong> <%= userInfo.sub %></p>
+        <p><strong>name:</strong> <%= userInfo.name %></p>
+        <p><strong>given_name:</strong> <%= userInfo.given_name %></p>
+        <p><strong>family_name:</strong> <%= userInfo.family_name %></p>
+        <p><strong>picture:</strong> <%= userInfo.picture %></p>
+        <p><strong>email:</strong> <%= userInfo.email %></p>
+        <p><strong>email_verified:</strong> <%= userInfo.email_verified %></p>
+        <p><strong>locale:</strong> <%= userInfo.locale %></p>
+        <p><strong>hd:</strong> <%= userInfo.hd %></p>
+        <br />
+
+
+        <hr></hr>
+        <h2>Token Information</h2>
+        <hr></hr>
+        <p><strong>access_token:</strong> <%= tokenSet.access_token %></p>
+        <p><strong>expires_at:</strong> <%= new Date(tokenSet.expires_at) %></p>
+        <p><strong>scope:</strong> <%= tokenSet.scope %></p>
+        <p><strong>token_type:</strong> <%= tokenSet.token_type %></p>
+        <p><strong>id_token:</strong> <%= tokenSet.id_token %></p>
+        <hr></hr>
+        
+        <div>
+          <a href="/auth/logout"><button>Logout</button></a>
+          <hr></hr>
+        </div>
+      </div>
+    <% } else { %>
+      <div>
+        <a href="/auth/login"><button>Login</button></a>
+      </div>
+    <% } %>
+  </body>
+</html>
